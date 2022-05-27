@@ -4,7 +4,8 @@
 
 <!-- BADGES_START -->
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/sauber-php/container)
-![tests](https://github.com/sauber-php/container/workflows/run-tests/badge.svg)
+![Tests](https://github.com/sauber-php/container/workflows/tests/badge.svg)
+![Static Analysis](https://github.com/sauber-php/container/workflows/static/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/sauber-php/container.svg?style=flat-square)](https://packagist.org/packages/phpfox/container)
 ![GitHub](https://img.shields.io/github/license/sauber-php/container)
 <!-- BADGES_END -->

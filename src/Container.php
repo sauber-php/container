@@ -1,15 +1,15 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Sauber\Container;
 
 use Closure;
-use League\Container\Container as LeagueContainer;
-use League\Container\ReflectionContainer;
-use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use League\Container\ReflectionContainer;
 use Psr\Container\NotFoundExceptionInterface;
+use Psr\Container\ContainerExceptionInterface;
+use League\Container\Container as LeagueContainer;
 
 final class Container implements ContainerInterface
 {
@@ -34,8 +34,6 @@ final class Container implements ContainerInterface
     }
 
     /**
-     * @param string $id
-     * @return mixed
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
@@ -66,14 +64,13 @@ final class Container implements ContainerInterface
 
     /**
      * @param array<int, class-string<Closure>> $injectors
-     * @return ContainerInterface
      */
     public static function make(array $injectors): ContainerInterface
     {
         $definitions = [];
 
         foreach ($injectors as $injector) {
-            $definitions = array_merge((new $injector)());
+            $definitions = array_merge((new $injector())());
         }
 
         return new self(
